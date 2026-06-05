@@ -26,7 +26,7 @@ pytest tests/ -v
 
 # 4. Implémentez detect_fraud dans fraud_detection.py
 
-# 5. Montrez vos résultats au jury / au public (interface fournie)
+# 5. Créez VOTRE interface intuitive dans app.py (base fournie)
 streamlit run app.py
 ```
 
@@ -46,25 +46,28 @@ streamlit run app.py
 
 ---
 
-## Interface pour le jury et le public
+## Interface à créer (évaluée par le jury)
 
-Une **interface web de démo** est fournie (`app.py`). Elle appelle **votre** `detect_fraud` et affiche :
-
-- le nombre d’alertes fraude ;
-- un tableau lisible (montant, pays, score, explication) ;
-- les transactions suspectes mises en évidence.
+Un **squelette** `app.py` est fourni (Streamlit). **Vous devez le transformer** en interface **intuitive** pour que le jury et un public non technique comprennent votre solution.
 
 ```bash
 streamlit run app.py
 ```
 
-Vous n’avez **pas** à recréer l’interface from scratch : codez la logique dans `fraud_detection.py`, l’écran se met à jour tout seul.  
-**Bonus (non noté en CI)** : améliorez `app.py` (graphiques, textes, filtres…) pour une démo plus parlante devant un public non technique.
+À faire dans `render_interface()` :
+- expliquer clairement ce qui est suspect et pourquoi ;
+- présenter les résultats de façon visuelle (tableaux, cartes, couleurs, filtres, graphiques…) ;
+- guider l’utilisateur sans qu’il lise le code.
 
-> **Ce qui est noté** : les tests `pytest` (CI + classement final).  
-> **Ce qui est montré** : `streamlit run app.py` pour que les profanes comprennent votre solution.
+**Important :**
+| Élément | Qui juge ? |
+|---------|------------|
+| `detect_fraud` + tests | **Automatique** (CI + classement X/21) |
+| `app.py` (votre interface) | **Jury humain** (repêchage, démo, créativité) |
 
-## Ce que vous devez implémenter (cœur du défi)
+La CI **ne note pas** l’interface. Le jury l’utilisera pour **repêcher** des candidats intéressants au-delà du seul score technique.
+
+## Ce que vous devez implémenter (moteur de détection)
 
 Dans `fraud_detection.py`, complétez :
 

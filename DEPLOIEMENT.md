@@ -54,12 +54,12 @@ Dépôt officiel : https://github.com/INTELO2026/fraud-challenge
 3. pip install -r requirements.txt
 4. pytest tests/ -v
 5. Implémentez detect_fraud dans fraud_detection.py
-6. Démo pour le jury / le public : streamlit run app.py
-7. git push puis ouvrez une Pull Request vers INTELO2026/fraud-challenge
-8. La CI affiche X/11 tests publics passés
+6. Créez votre interface intuitive dans app.py (fonction render_interface)
+7. Démo jury : streamlit run app.py
+8. git push puis ouvrez une Pull Request vers INTELO2026/fraud-challenge
+9. La CI affiche X/11 tests publics passés (partie technique uniquement)
 
-Note : l'interface Streamlit est fournie — vous codez la détection, l'écran s'affiche tout seul.
-La note officielle = tests automatiques. L'interface sert à présenter devant un public non technique.
+Note : tests = notés automatiquement. Interface = évaluée par le jury pour repêcher des candidats (voir organisateur/GRILLE_JURY.md).
 ```
 
 ---
